@@ -1,0 +1,15 @@
+/* GLOBAL */
+body{
+  color: #333
+}
+
+/* ID'S */
+#message{
+  font-weight: bold;
+}
+
+/* CLASSES */
+.component{
+  padding: 32px;
+  border: solid 1px #333;
+}
