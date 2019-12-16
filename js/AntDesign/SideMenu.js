@@ -7,7 +7,7 @@ export const SideBarModel = {
 
 export const side_bar = (model=SideBarModel) =>
   h('div', { class: `side_bar`}, [
-    h('h2', { class: `side_bar_title`}, [ "Abaco system" ]),
+    h('h2', { class: `side_bar_title`}, [ "Abaco Instruments" ]),
     h('ul', { class: `side_bar_item_list`}, [
       side_bar_head_item({label: "Creditos", icon: "money-check-alt"}),
       side_bar_tail_item({label: "Buscar"}),
