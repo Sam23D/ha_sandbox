@@ -27,8 +27,8 @@ export const bank_view = () =>
     bank_top_info(),
     credit_detail_info(),
     content_row([
-      bank_resale_table({table:{title: "Resumen de reventa"}}),
-      bank_note_summary_table({table:{title: "Resumen de reventa"}}),
+      bank_resale_table({table:{title: "Movimientos de reventa"}}),
+      bank_note_summary_table({table:{title: "Resumen de Notas"}}),
     ])
   ])
 
@@ -82,7 +82,7 @@ const bank_note_summary_table = ({table}, data=NOTE_SUMMARY_MOCK) =>{
     ]
   })
 
-  return paginated_table({title: "Resumen de notas"}, {rows: data_rows, head: head_labels })
+  return paginated_table({title: table.title}, {rows: data_rows, head: head_labels })
 }
 
 const NOTE_SUMMARY_MOCK = {
