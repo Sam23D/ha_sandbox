@@ -1,37 +1,34 @@
 import { h } from "../../hyperapp.js"
 
-export const paginated_table = ()=>
+let _paginated_table_opts_def = {
+  rows: [], head: []
+}
+export const paginated_table = ({title}, {rows, head}=_paginated_table_opts_def)=>
   h('div', { class: `paginated_table`}, [
     h('div', { class: `paginated_table_title`}, [
-      "Pagos"
+      title
     ]),
     h('table', { class: `paginated_table_content`}, [
-      paginated_table_row_head(),
-      paginated_table_row(),
-      paginated_table_row(),
-      paginated_table_row(),
-      paginated_table_row(),
-      paginated_table_row(),
-      paginated_table_row(),
-      paginated_table_row(),
-      paginated_table_row(),
-      paginated_table_row(),
+      paginated_table_row_head(head),
+      rows.map((row_data)=>{
+        return paginated_table_row(row_data)
+      })
     ]),
     paginated_table_pagination(),
   ])
 
-export const paginated_table_row_head = ()=>
+export const paginated_table_row_head = (head_data)=>
   h('tr', { class: `paginated_table_row_head`}, [
-    paginated_table_row_head_cell([""]),
-    paginated_table_row_head_cell(["Referencia"]),
-    paginated_table_row_head_cell(["Cantidad"]),
+    head_data.map((val)=>{
+      return paginated_table_row_head_cell(val)
+    })
   ])
 
-export const paginated_table_row = ()=>
+export const paginated_table_row = (data_cells)=>
   h('tr', { class: `paginated_table_row`}, [
-    paginated_table_row_cell(["1"]),
-    paginated_table_row_cell(["33000012"]),
-    paginated_table_row_cell(["$1200,00"]),
+    data_cells.map(( cell_data )=>{
+      return paginated_table_row_cell([cell_data])
+    })
   ])
 
 export const paginated_table_row_head_cell = (children)=>

@@ -1,3 +1,39 @@
+.top_menu{
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+  color: #666;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 0px 42px;
+}
+.top_menu_search_bar{
+  align-items: center;
+  display: flex;
+}
+.top_menu_search_bar input{
+  border: none;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 8px;
+}
+.top_menu_search_bar input:focus{
+  border-bottom: 1px solid #999;
+  outline-style: none;
+}
+
+.top_menu_action_icon{
+  align-items: center;
+  display: flex;
+  padding: 0 8px;
+  font-size: 18px;
+  height: 48px;
+}
+.top_menu_action_icon:hover{
+  background-color: #efefef;
+}
+
 .paginated_table{
   font-family: 'Open Sans', sans-serif;
 
@@ -151,7 +187,7 @@
   margin-right: 18px;
 }
 .data_card_labeled_value_spacer{
-  min-width: 210px;
+  min-width: 230px;
 }
 .data_card_bold_label{
   font-size: 14px;
@@ -162,7 +198,7 @@
 }
 .data_card_labeled_value{
   padding-bottom: 4px;
-  min-width: 210px;
+  min-width: 250px;
 }
 .data_card_labeled_value label{
   color: #000;
@@ -181,13 +217,35 @@
   min-width: 150px;
 }
 .data_card_labeled_short_value label{
-  color: #000;
+  color: #999;
+  font-size: 12px;
   padding: 0 6px 0 0;
 }
 .data_card_labeled_short_value span{
-  color: #0880df;
+  color: #333;
   margin-right: 18px;
 }
 .data_card_labeled_short_value span:hover{
   color: #1890ff;
+}
+
+.value_card{
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 4px 8px;
+  padding: 16px 24px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.value_card_label{
+  font-size: 12px;
+  padding-bottom: 8px;
+  color: #666;
+}
+
+.value_card_value{
+  font-size: 22px;
+  color: #333;
 }
