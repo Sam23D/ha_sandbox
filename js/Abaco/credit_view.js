@@ -3,6 +3,7 @@ import { content_container, content_row } from "../AntDesign/ContentContainer.js
 import { paginated_table } from "../AntDesign/components/tables.js"
 import { 
   attributes_card, 
+  attributes_card_block, 
   data_card, 
   value_card,
   data_card_labeled_value,
@@ -85,5 +86,6 @@ const credit_detail_info = () =>
 
 const credit_payments_table = () =>
   content_row([
-    paginated_table(),
+    // paginated_table(), 
+    // paginated_table(), 
   ])
