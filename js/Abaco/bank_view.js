@@ -82,7 +82,7 @@ const bank_note_summary_table = ({table}, data=NOTE_SUMMARY_MOCK) =>{
     ]
   })
 
-  return paginated_table({title: table.title}, {rows: data_rows, head: head_labels })
+  return paginated_table({title: table.title}, {rows: data_rows, head: head_labels, pagination: false, page_size: 3 })
 }
 
 const NOTE_SUMMARY_MOCK = {
@@ -104,7 +104,45 @@ const NOTE_SUMMARY_MOCK = {
     payment_amount: "6359.160000000000000000000000",
     sold_date: "not_sold",
     start_date: "2016-03-15"
-  }
+  },
+  "12000000964" : {
+    amount: "2000.00",
+    commission: "63.22474211862336000000000000",
+    note_identifier: "12000000963",
+    ordinary_interest: "917.0153454400000000000000000",
+    paid_capital: "4533.393457889600000000000000",
+    payment_amount: "5597.131258600000000000000000",
+    sold_date: "not_sold",
+    start_date: "2016-06-16"
+  },"12000000093" : {
+    amount: "5000.00",
+    commission: "71.59160245333333333333333333",
+    note_identifier: "12000000092",
+    ordinary_interest: "1171.688333333333333333333333",
+    paid_capital: "5000.001533333333333333333333",
+    payment_amount: "6359.160000000000000000000000",
+    sold_date: "not_sold",
+    start_date: "2016-03-15"
+  },
+  "12000001964" : {
+    amount: "2000.00",
+    commission: "63.22474211862336000000000000",
+    note_identifier: "12000000963",
+    ordinary_interest: "917.0153454400000000000000000",
+    paid_capital: "4533.393457889600000000000000",
+    payment_amount: "5597.131258600000000000000000",
+    sold_date: "not_sold",
+    start_date: "2016-06-16"
+  },"12000001093" : {
+    amount: "5000.00",
+    commission: "71.59160245333333333333333333",
+    note_identifier: "12000000092",
+    ordinary_interest: "1171.688333333333333333333333",
+    paid_capital: "5000.001533333333333333333333",
+    payment_amount: "6359.160000000000000000000000",
+    sold_date: "not_sold",
+    start_date: "2016-03-15"
+  },
 }
 
 const bank_resale_table = ({table}, data=RESALE_DATA_MOCK) =>{
